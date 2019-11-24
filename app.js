@@ -20,9 +20,10 @@ searchUser.addEventListener("keyup", e => {
         ui.showProfile(data.profile);
       })
       .catch(err => {
-        //Show alert
+        ui.showAlert("User not found", "alert alert-danger");
       });
   } else {
     // Clear profile
+    ui.clearProfile();
   }
 });
